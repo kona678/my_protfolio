@@ -47,17 +47,14 @@ body,html{
 #nav-toggler:checked{
     transform:rotate(90deg)
 }
-#nav-toggler:checked ~ .navbar1{
-    top:0;
-}
+
 .navbar1{
     position:fixed;
     left: 0;
-    top: -110%;
+    top: 0;
     height: 100%;
     width: 100%;
     z-index: 1000;
-    display:flex;
     align-items:flex-start;
     justify-content:center;
     flex-flow:column;
