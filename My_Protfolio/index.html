@@ -10,27 +10,27 @@
     <link href="css/bootstrap-extensions.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
 </head>
 <body>
 
-<input type="checkbox" style="-webkit-text-stroke:2px white" name="" id="nav-toggler" class="fa-solid fa-bars">
+<input id="nav-toggler" onchange="navbar()" type="checkbox" style="-webkit-text-stroke:2px white" id="nav-toggler" class="fa-solid fa-bars">
     <a class="logo" href="#"></a>
 
-     <nav class="navbar1">
-        <a href="#" style="text-decoration:none;" Data-text="home">Home</a>
-        <a href="#" style="text-decoration:none;" Data-text="about me">About me</a>
-        <a href="#" style="text-decoration:none;" Data-text="my services">My Services</a>
-        <a href="#" style="text-decoration:none;" Data-text="contact">Contact</a>
+     <nav style="display: none;"  id="navbar" class="navbar1">
+        <a onclick="navbar()" href="#home" style="text-decoration:none;" Data-text="home">Home</a>
+        <a onclick="navbar()" href="#about" style="text-decoration:none;" Data-text="about me">About me</a>
+        <a onclick="navbar()" href="#services" style="text-decoration:none;" Data-text="my services">My Services</a>
+        <a onclick="navbar()" href="#contact" style="text-decoration:none;" Data-text="contact">Contact</a>
         <div class="background-img"></div>
      </nav>
-
+<div id="home">
     <div class="intro">
         <h1 class="intro-heading">Hi, my name is <strong class="intro-name">Shekh Kaniz Fatema</strong></h1>
         <p class="intro-description">I am a passionate designer and develope <span class="animated-text">Websites</span></p>
     </div>
+</sction>
 
-
+<section id="about">
     <div class="about p-5">
         <h1 class="about-me">About me</h1>
         <h1>Welcome to my protfolio</h1>
@@ -44,7 +44,7 @@
         positively shape the way users interact with technology.</p>
     </div>
 
-    <section class=" p-5">   
+    <div class=" p-5">   
             <div class="container text-center pt-5">
                 <div class="justify-content-around d-flex flex-row g-2">
                     <div class="group-hover">
@@ -62,9 +62,9 @@
                 </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section class=" p-5">   
+        <div class=" p-5">   
             <div class="container text-center pt-5">
                 <div class="justify-content-around d-flex flex-row g-2">
                     <div class="text-center ">
@@ -82,9 +82,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-    <section class="bg-white p-5">
+    <div class="bg-white p-5">
         <h1 class="container text-primary" style="text-align:center;">My Skills</h1>
             <div class="container pb-5">
                 <div class="container mt-5">
@@ -218,11 +218,9 @@
                     </div>
                 </div>
             </div>
-    </section>
-
-    
+    </div>
                 
-            <section class="p-5 text-center bg-size-cover bg-no-repeat bg-attachment-fixed"
+            <div class="p-5 text-center bg-size-cover bg-no-repeat bg-attachment-fixed"
             style="background-image:url('0_zuJQ3cQs6pvnqlWD.jpg');">
             <div class="container p-5">
                 <h1 class="text-primary">Education</h1>
@@ -265,9 +263,13 @@
                     </div>
                 </div>
             </div>
-            </section>
+            </div>
+</section>
 
-            <section class=" p-5">
+
+    
+    <section id="services">
+            <div class=" p-5">
             <div class="text-center ">
                 <h6 class="text-primary">My services</h6>
                 <h1 class="text-dark">What I do</h1>
@@ -336,9 +338,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-            <section class="p-5 text-center bg-size-cover bg-no-repeat bg-attachment-fixed"
+
+    <section id="contact">
+            <div class="p-5 text-center bg-size-cover bg-no-repeat bg-attachment-fixed"
                 style="background-image: url('12.png');">
                 <div class="container">
                     <div class="p-5">
@@ -390,10 +395,11 @@
                         <h6>+88 01903832429</h6>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
             <div class=" container text-center fs-6 pt-5">
-        <div class="row">
+            <div class="row">
             <div class="col-12 col-md-6 mt-3 order-2 order-md-1">
                 <p>© 2022 all rights reserve by Shekh Kaniz Fatema</p>
             </div>
