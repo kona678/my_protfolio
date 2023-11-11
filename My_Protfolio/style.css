@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Mooli&family=Poppins:ital,wght@0,600;1,600&display=swap');@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border:none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .3s linear;
+    font-family: 'Croissant One', cursive;
+}
+body,html{
+    overflow-x:hidden;
+}
+.logo{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background:url("img/kf.png");
+    display:flex;
+    background-position: center;
+    background-size: cover;
+}
+
+
+#nav-toggler{
+    -webkit-appearance: none;
+    position:fixed;
+    top:20px;
+    right:30px;
+    cursor:pointer;
+    z-index:1001;
+    font-size:2rem;
+}
+#nav-toggler:checked::before{
+    content: '\f00d';
+    color: rgb(0, 0, 0);
+    transition: 0s linear 0s;
+}
+
+#nav-toggler:checked{
+    transform:rotate(90deg)
+}
+
+.navbar1{
+    position:fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    align-items:flex-start;
+    justify-content:center;
+    flex-flow:column;
+    padding: 0 10%;
+    text-decoration: none;
+    background-color:#E4F1FF;
+
+}
+.navbar1 a{
+    font-size: 3em;
+   color:transparent;
+   -webkit-text-stroke: .5px rgb(254, 254, 255);
+   font-weight: bolder;
+   position: relative;
+   letter-spacing: 3px;
+}
+.navbar1 a::before{
+    content: attr(Data-text);
+    position:absolute;
+    top:0;
+    left:0;
+    color:  rgba(10, 100, 235, 0.9);
+    transition: .3s linear;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+.navbar1 a:hover::before{
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+}
+.background-img{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: url("img/flower1.png") no-repeat;
+    background-size:cover;
+    background-position: center;
+    z-index:-1;
+}
+.navbar1 a:hover:nth-child(2) ~ .background-img{
+    background: url("img/flower2.png") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.navbar1 a:hover:nth-child(3) ~ .background-img{
+    background: url("img/flower1.png") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+.navbar1 a:hover:nth-child(4) ~ .background-img{
+    background: url("img/flower2.png") no-repeat;
+    background-size:cover;
+    background-position: center;
+}
+
+@media (max-width:768px){
+    .navbar1 a{
+        font-size: 2em;
+    }
+}
+@media (max-width:480px){
+    .navbar1 a{
+        font-size: 1em;
+    }
+}
+.intro{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 20%;
+    background: url("img/sunrise.png") no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.intro-heading{
+    font-size: 24px;
+    color: #8f8c8c;
+}
+.intro-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+}
+.intro-description{
+    font-size: 20px;
+    color: #ffffff;
+}
+.about{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-flow:column;
+}
+.about-me{
+    font-size: 20px;
+    color:#007bff;
+}
+.about-intro{
+    font-size: 15px;
+    text-align:center;
+    padding: 5%;
+}
+.line-bars{
+    font-size:15px;
+    align-items: center;
+    border-radius:20px;
+    width:100%;
+    display:flex;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgb(231, 231, 231);
+}
+.certificate {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 9999;
+    max-width: 90%; 
+    height: 90vh;
+    overflow: auto;
+    border: 2px solid #000000; 
+    box-shadow: 0 0 10px rgba(21, 207, 207, 0.5); 
+}
+.main-certificate:hover .certificate{
+    display:block;
+}
+
+.cv {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 9999;
+    max-width: 90%; 
+    height: 90vh; 
+    overflow: auto;
+    border: 2px solid #000; 
+    box-shadow: 0 0 10px rgba(21, 207, 207, 0.5); 
+
+}
+.main-cv:hover .cv{
+    display:block;
+    
+}
